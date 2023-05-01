@@ -1,0 +1,145 @@
+header {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  transition: top 0.3s ease-in-out;
+}
+
+.header__nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 20px;
+}
+
+.imgLogo {
+  background-image: url('../../images/headerLogo.png');
+  transition: background-image 0.3s ease-in-out;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 50px;
+  height: 50px;
+}
+
+.imgLogo:hover {
+  background-image: url('../../images/hoverLogo.png');
+}
+
+.header__nav img {
+  height: 50px;
+}
+
+.header__nav h2 {
+  font-size: 1.2rem;
+  margin-right: 40px;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+}
+
+.header__nav h2:hover {
+  color: #FFA500;
+}
+
+.header__cart {
+  display: flex;
+  align-items: center;
+  column-gap: 30px;
+  cursor: pointer;
+}
+
+.header__cart input {
+  border-radius: 10px;
+  padding-left: 10px;
+}
+
+.header__cart .MuiSvgIcon-root {
+  font-size: 45px;
+  fill: #333;
+  transition: fill 0.3s ease-in-out;
+}
+
+.header__cart .MuiSvgIcon-root:hover {
+  fill: #FFA500;
+}
+
+.Header--visible {
+  transform: translateY(0);
+  transition: .3s ease-in-out;
+}
+
+.Header--hidden {
+  transform: translateY(-100%);
+  transition: .3s ease-in-out;
+}
+
+@media screen and (max-width: 1180px) {
+  .header__nav h2 {
+    margin-right: 30px;
+  }
+
+  .header__cart {
+    column-gap: 20px;
+  }
+
+  .header__cart .MuiSvgIcon-root {
+    font-size: 40px;
+  }
+
+  .imgLogo {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media screen and (max-width: 844px) {
+  .header__nav h2 {
+    margin-right: 20px;
+  }
+
+  .header__cart {
+    column-gap: 10px;
+  }
+
+  .header__cart .MuiSvgIcon-root {
+    font-size: 35px;
+  }
+
+  .imgLogo {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media screen and (max-width: 740px) {
+  .header__nav h2 {
+    margin-right: 10px;
+    font-size: 1rem;
+  }
+
+  .header__cart {
+    column-gap: 5px;
+  }
+
+  .header__cart .MuiSvgIcon-root {
+    font-size: 30px;
+  }
+
+  .imgLogo {
+    width: 20px;
+    height: 20px;
+  }
+}
